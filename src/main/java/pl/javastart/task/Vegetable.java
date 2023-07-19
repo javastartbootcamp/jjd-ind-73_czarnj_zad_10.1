@@ -37,8 +37,12 @@ public class Vegetable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Vegetable vegetable)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Vegetable vegetable)) {
+            return false;
+        }
         return Double.compare(vegetable.weight, weight) == 0 && Objects.equals(name, vegetable.name);
     }
 
